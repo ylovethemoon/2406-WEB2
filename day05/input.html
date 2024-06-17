@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+    <link rel="stylesheet" href="../reset.css">
+</head>
+<style>
+    .input-box {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+</style>
+<body>
+    <!-- input은 form의 구성요소로 사용하는 태그이긴 하지만, form 없이 별도로 사용가능.  -->
+<form action="">
+    <div class="input-box">
+        <h3>text</h3>
+        <input type="text">
+    </div>
+    <div class="input-box">
+        <h3>password</h3>
+        <input type="password">
+    </div>
+    <div class="input-box">
+        <h3>checkbox</h3>
+        <!-- checked 속성으로 초기값 설정 가능 (checked 되게)-->
+        <input type="checkbox" checked name="checked" id="">
+        <!-- display : none 처리된 체크박스도 정상적으로 전달된다. -->
+        <input type="checkbox" checked name="hidden-checked" id="" style="display: none;">
+        
+        <!-- day05/input.html?checked=on&hidden-checked=on -->
+    </div>
+    <div class="input-box">
+        <h3>radio</h3>
+         <!-- 제출 하는 라디오버튼 사용시 value 필수 -->
+        <!-- name 값을 맞춰주면 하나의 그룹으로 묶여 한 버튼만 선택되게 바뀐다. -->
+        <input type="radio" name="test" id="real-yes-radio" value="real-yes">
+        <label for="real-yes-radio">매우 그렇다</label>
+        <input type="radio" name="test" id="yes-radio" value="yes">
+        <label for="yes-radio">그렇다</label>
+        <input type="radio" name="test" id="no-radio" value="no">
+        <label for="no-radio">아니다</label>
+        <input type="radio" name="test" id="real-no-radio" value="real-no">
+        <label for="real-no-radio">매우 아니다</label>         
+    </div>
+    <input type="submit" value="제출">
+
+    <input type="date" name="" id="">
+    <input type="file" name="" id="">
+</form>
+
+</body>
+</html>
