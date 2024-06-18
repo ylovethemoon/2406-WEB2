@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="stylesheet" href="../reset.css">
+<style>
+/*    position 
+        static :포지션의 기본 값. 
+                    정적, 고정이란 뜻을 가지고 있으며, 
+                    static 상태 이후에 나 올 각종 position 속성들과 전혀 상호작용을 하지 못한다.
+        relative :포지션과 관련 있게 만들어주는 속성.
+                    기존의 흐름을 따라가지만, position에 영향을 받는다. 
+        absolute :        
+ */
+    .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;      
+        
+        left: 46px;
+    }    
+    .static-box {
+        position: static;
+        background-color: cadetblue;       
+    }
+    .relative-box {
+        position: relative;
+        top: 40px;
+        background-color: pink;
+    }
+    .absolute-box {
+        position: absolute;
+        top:40px;
+        background-color: orange
+    }
+    .mini-box {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+    }
+    .fixed-box {
+        position: fixed;
+        top: 40px;
+       
+    }
+</style> 
+</head>
+<body>
+    <div class="box static-box">static</div>
+
+    <!-- 흐름에는 순응하지만 position에는 영향을 받는 박스 -->
+    <div class="box relative-box">relative</div>
+    <div class="box static-box">static2</div>
+    
+    <!-- 흐름에서 벗어나 ***position 속성을 가진 조상***에 정렬되는 박스 -->
+    <!-- 가장 먼저 만나는 position 조상이 body이므로 body를 기준으로 정렬됨 -->
+    <div class="box absolute-box">absolute</div>
+
+    <!-- 흐름에 순응하는 relative-box 안에 absolute박스를 넣은 형태. -->
+    <!-- relative-box를 기준으로 정렬되는것을 알 수 있다. -->
+    <div class="box relative-box">relative2
+        <div class="box mini-box absolute-box">mini</div>       
+    </div>
+
+    <!-- position이 아닌 static-box 안에 absolute 박스를 넣은 형태 -->
+    <!-- static은 무시되므로 역시 body를 기준으로 정렬되는것을 확인 할 수 있다. -->
+    <div class="box static-box">static3
+        <div class="box mini-box absolute-box">mini2</div> 
+    </div>
+
+    <div class="box static-box">static4
+        <div class="box fixed-box">fixed</div>
+    </div>
+</body>
+</html>

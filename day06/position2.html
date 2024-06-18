@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+<style>
+    body {
+        height: 5000px;
+    }
+    header {
+         height: 80px;
+        background-color: khaki;
+        padding: 0 32px;
+
+        position: fixed;
+        top: 0;
+
+        width: 100%;
+        box-sizing: border-box;
+            
+    }
+
+    .header-container {
+        display: flex;            
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    nav {
+        background-color: white;
+        height: 16px;
+        width: 800px;
+    }
+
+    .icons {
+        background-color: whitesmoke;
+        height: 48px;
+        width: 200px;
+    }
+
+    .container {
+
+/*      헤더 여백 만들어주는 공식. margin-top은 구조가 복잡해지면 문제가 생기기 때문에
+        padding-top 을 헤더 높이 값만큼 준다. 
+*/
+        padding-top: 80px;
+    }
+</style> 
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>logo</h1>
+            <nav>
+
+            </nav>
+            <div class="icons">
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, fuga. Dolorum facilis quae quis at tempora dolorem quia placeat modi aperiam voluptatum, suscipit veritatis natus omnis laboriosam molestiae rem porro!
+    </div>
+</body>
+</html>
