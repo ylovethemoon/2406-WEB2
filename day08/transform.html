@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <link rel="stylesheet" href="../reset.css">
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh
+    }
+    .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #222;
+        background-color: pink;
+
+        font-size: 24px;
+        font-weight: bold;
+            
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        opacity: 0.8;
+    }
+    .origin {
+        background-color: #22222280;
+        }
+
+    .trans {
+        /* 
+        ⭐ translate와 position 속성과 어떻게 다른가?
+
+        1. 중점
+         - position의 left 100% 같은 값은 
+         정렬된 개체에 지정하지만 중점은 컨테이너다. 
+
+         - transform 속성은 자기 자신의 중점으로부터 이동한다.
+         trnaslate(100%)는 자신의 x 크기만큼 오른쪽으로 이동한다.
+         
+        ⚪ translate : 이동시키는 속성
+
+        translate(x 이동거리,y 이동거리) : x,y 축 이동
+        translateX(x이동거리) - x
+        translateY(y이동거리) - y
+        translateZ(z이동거리) - y
+        translate3D(x이동거리,y이동거리,z이동거리) - 3d 이동
+
+        ex) transform: translate($px,$%...)
+
+
+        ⚪ scale : 크기를 변화시키는 속성
+        ex) scale(2) =  scale(200%) : 원래 크기보다 2배로 커진다.
+
+        scale(비율) : 1:1비율로 변형
+        scale(X비율,Y비율) : 자유변형
+        scaleX(비율) : X축 비율 변형
+        scaleY(비율) : Y축 비율 변형
+        scaleY(비율) : Z축 비율 변형
+        scale3d(비율,비율,비율) : 3d 비율 변형
+
+        ❕ wh_vs_scale.html를 참고해 width,height를 직접 바꾸는것과
+        scale을 이용해 크기를 바꾸는것의 차이를 완벽히 구분해보자
+
+
+        ⚪ rotate : 회전시키는 속성
+            날씨 화살표 같은거에 쓰임.
+        rotate($deg)
+        ..
+        ..
+        ..
+        (x y z, 3d 등등..)
+
+        ex) transform: rotate(45deg)
+
+        ⚪ skew : 기울이는 속성
+
+
+        ex) transform: skewX($deg) skewY($deg);
+        
+        
+
+        🔘 transform-origin: 중점이 어디서 시작되나.
+            기본값 : center center
+
+        
+        ex) transform-origin: top left;
+            transform-origin: $% center;
+        */
+        
+        transform-origin: 150% center;
+        transform: scale(2);
+        }
+
+        
+</style>
+</head>
+<body>
+   <div class="box origin">원래박스</div>
+   <div class="box trans">transform</div>
+</body>
+</html>
