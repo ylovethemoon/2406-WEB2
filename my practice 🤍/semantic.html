@@ -3,9 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>시맨틱구조: 연습</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            background-color: #e4e4e4
+        }
+
+        header {
+            font-size: 64px;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            padding: 36px;
+        }
+
+        nav {
+            width: 1280px;
+            height: 50px;
+            margin: 0 auto;
+            background-color: pink;
+                       
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            margin-bottom: 10px;
+        }
+
+        menu {
+            padding: 14px 64px;
+        }
+        
+        .input-container {
+            padding: 14px 64px; 
+        }
+
+        input {
+            height: 24px;
+        }
+
+
+        button {
+            font-size: 16px;
+            background-color: #424242;
+            color: whitesmoke;
+            width: 64px;
+            height: 32px;
+        }
+
+        .main-container {
+            width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            
+
+            margin-bottom: 10px;
+        }
+
+        main {
+            background-color: whitesmoke;
+            width: 80%;
+            padding: 6px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            padding: 16px;
+            font-style: italic;
+        }
+
+        p {
+            padding: 8px;
+            line-height: 24px;
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: bold;
+            font-style: italic;
+            padding: 16px;
+        }
+        
+        aside {
+            background-color: pink;
+            padding: 6px;
+            
+        }
+        ul {
+            padding: 8px;
+ 
+           
+        }
+        li {
+           
+            list-style-position: inside;
+            list-style-type: disc;
+            list
+        
+            padding: 8px ;
+            line-height: 24px;
+        }
+
+        footer {
+            background-color: whitesmoke;
+            width: 1280px;
+            height: 50px;
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+           
+        }
+    </style>
 </head>
 <body>
-    
+    <header>header</header>
+    <nav>
+        <menu>HOME</menu>
+        <menu>OUR TEAM</menu>
+        <menu>PROJECTS</menu>
+        <menu>CONTACT</menu>
+        <div class="input-container">
+            <input type="text">
+            <button>Go !</button>      
+        </div>
+    </nav>
+    <div class="main-container">
+        <main>
+            <h2>Article heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur assumenda temporibus est eveniet, fugit minima expedita, nostrum architecto a inventore autem odit dolorem voluptate molestias, distinctio facilis reiciendis quam eos.</p>
+         
+                <h3>subsection</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, ipsam incidunt. Mollitia accusantium aliquid labore ducimus! Fugiat, ex, dolore numquam doloremque error ea consectetur deserunt suscipit illum optio, saepe excepturi?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, ipsam incidunt. Mollitia accusantium aliquid labore ducimus! Fugiat, ex, dolore numquam doloremque error ea consectetur deserunt suscipit illum optio, saepe excepturi?</p>
+                
+          
+        
+                <h3>Another subsection</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, ipsam incidunt. Mollitia accusantium aliquid labore ducimus! Fugiat, ex, dolore numquam doloremque error ea consectetur deserunt suscipit illum optio, saepe excepturi?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, ipsam incidunt. Mollitia accusantium aliquid labore ducimus! Fugiat, ex, dolore numquam doloremque error ea consectetur deserunt suscipit illum optio, saepe excepturi?</p>
+         
+        </main>
+        <aside>
+            <h2>Related</h2>
+            <ul>               
+                <li><a href="">oh I do like to be beside the seaside</a></li>               
+                <li><a href="">oh I do like to be beside the seaside</a></li>
+                <li><a href="">Although in the North of England</a></li>
+                <li><a href="">It never stops raining</a></li>
+                <li><a href="">Oh well...</a></li>
+                </a>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>copyright 2050 by nobody. All righrs reversed.</footer>
+
 </body>
 </html>
