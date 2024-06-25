@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            /* 모든 트랜지션 효과를 한번에 쓸 수 있음.*/
+            transition: 5s;
+
+             /* 트랜지션을 어느 속성에 적용할 것인지 직접 설정 (기본값 : all) */
+            transition-property: width,height;
+            
+            /* 트랜지션 지속시간 */
+            transition-duration: 0.5s,0.5s;
+           
+            /* 트랜지션을 재생 할 가속도 함수 (기본값 : ease) */
+            transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0),ease;
+
+            /* 트랜지션 재생까지 지연시킬 시간 */
+            transition-delay: 0s,0.5s;
+        }
+
+        .box:hover {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+</html>
