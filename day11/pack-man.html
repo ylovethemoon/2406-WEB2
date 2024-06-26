@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pack-man</title>
+    <style>
+        body {
+            background-color: #222;
+        }
+
+        .pack {
+            width: 100px;
+            height: 100px;
+
+            
+
+            animation: move 3s infinite linear;
+
+            
+            
+        }
+
+        .m {
+            display: block;
+            width: 100px;
+            height: 50px;
+            background-color: yellow;
+        }
+
+        .top-m {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+
+            transform-origin: bottom;
+            animation: bite-up alternate infinite linear 0.2s;
+            
+        }
+
+        .bot-m {
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+            transform-origin: top;
+            animation: bite-down alternate infinite linear 0.2s;
+        }
+
+        @keyframes bite-up {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-45deg);
+            }
+        }
+        @keyframes bite-down {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(45deg);
+        }
+         }
+        
+        @keyframes move {
+            0% {
+                transform: translate(10px, 10px);
+            }
+
+            25% {
+                transform: translate(200px, 10px);
+            }
+
+            50% {
+                transform: translate(200px, 200px);
+            }
+
+            75% {
+                transform: translate(10px, 10px);
+            }
+
+            100% {
+                
+            }
+            
+        }
+
+          
+    </style>
+</head>
+<body>
+    <div class="pack">
+        <span class="m top-m"></span>
+        <span class="m bot-m"></span>
+    </div>
+</body>
+</html>
