@@ -104,6 +104,98 @@
             }
         }
 
+        .h-container {
+            width: 200px;
+            aspect-ratio: 1;
+        }
+
+
+        .red-box-y {
+
+            width: 40px;
+            height: 10px;
+
+            visibility: hidden;
+
+            
+
+            background-color: red;
+
+            transform-origin: top;   
+
+            animation: h-scale-y 1s forwards;
+        }
+
+        .red-box-x {
+
+            width: 10px;
+            height: 40px;
+
+            visibility: hidden;
+
+            background-color: red;
+
+            position: absolute ;
+            top: 42%;
+            left: 10%;
+
+            transform-origin: left;
+        
+
+
+            animation: h-scale-x 1s forwards ;
+            animation-delay: 1s;
+        }
+
+        .red-box-y:last-child {
+
+            width: 40px;
+            height: 10px;
+
+            background-color: red;
+
+            transform-origin: top;
+
+            position: absolute;
+            top: 0%; 
+            left: 50%;
+   
+
+            animation: h-scale-y 1s forwards;
+            animation-delay: 2s;
+        }
+        
+
+
+        @keyframes h-scale-y {
+            0% {
+                transform: scale(1);
+                visibility: visible;
+               
+          
+            }
+
+            100% {
+                transform: scale(1, 20);
+                visibility: visible;
+            }
+    
+        }
+
+        
+        @keyframes h-scale-x {
+            0% {
+                transform: scale(0px, 0px);
+                visibility: visible;
+                
+            }
+
+            100% {
+                transform: scale(8, 1);
+                visibility: visible;
+            }
+    
+        }
 
     </style>
     
@@ -122,8 +214,14 @@
         <div class="scale"></div>
     </div>   
 </div>
-</div>
 
+<div class="container">
+    <div class="h-container animation-container">
+        <div class="red-box-y"></div>
+        <div class="red-box-x"></div>
+        <div class="red-box-y"></div>
+
+    </div>
 </div>
 </body>
 </html>
