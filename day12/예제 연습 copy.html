@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+        .container {
+           width: 400px;
+           height: 400px;
+
+           background-color: #222;
+
+           position: relative;
+        }
+
+        .animation-container {
+            width: 40px;
+            /* height: 40px; */
+            aspect-ratio: 1;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+           
+        }
+
+        .scale-container {
+            width: 140px;
+            aspect-ratio: 1;
+
+
+        }
+
+        .roading {
+            width: 100%;
+            height: 100%;
+
+            border: 8px solid white;
+            border-radius: 50%;
+            border-top-color: red;
+            box-sizing: border-box;
+            
+           
+            animation: roading infinite 1s;
+        }
+
+        @keyframes roading {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .scale {
+            width: 100%;
+            aspect-ratio: 1;
+            background-color: white;
+            border-radius: 50%;
+
+            position: absolute;
+
+            transform: scale(0);
+            opacity: 1;
+
+            animation: scale 2s infinite
+        }
+
+        .scale:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .scale:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+  
+
+        @keyframes scale {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+                
+            }
+
+            50% {
+                transform: scale(1);
+                opacity: 0;
+
+                
+            }    
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+                
+            }
+        }
+
+        .h-container {
+            width: 200px;
+            aspect-ratio: 1;
+
+           
+        }
+
+
+        .red-box {
+            width: 40px;
+            height: 1px;
+            background-color: red;
+
+
+    
+            animation: h-scale 6s infinite alternate;
+        }
+    
+        
+
+
+        @keyframes h-scale {
+            0% {
+                transform: scale(1);                         
+                transform-origin: top;
+            }
+
+            10% {
+                transform: scale(1, 200);  
+            }
+
+            20% {
+                transform: scale(5,40);
+                transform-origin: center left;
+
+            }
+
+            100% {
+                    
+          
+            }
+    
+        }
+
+    
+    
+
+    </style>
+    
+</head>
+<body>
+<div class="container">
+    <div class="animation-container">
+        <div class="roading"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="scale-container animation-container">
+        <div class="scale"></div>
+        <div class="scale"></div>
+        <div class="scale"></div>
+    </div>   
+</div>
+
+<div class="container">
+    <div class="h-container animation-container">
+        <div class="red-box"></div>
+        <div class="red-box"></div>
+        <div class="red-box"></div>
+
+    </div>
+</div>
+</body>
+</html>
