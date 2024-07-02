@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <!-- 반응형 제작시에는 pc퍼스트 or 모바일퍼스트 먼저 기획하고 해야한다.  -->
+    <style>
+        .반응형박스 {
+            width: 100%;
+            height: 50vh;
+            background-color: pink;
+        }
+
+        @media screen and (max-width:800px) and (min-width:750px) {
+            .반응형박스 {
+                background-color: blue;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="반응형박스"></div>
+</body>
+</html>
