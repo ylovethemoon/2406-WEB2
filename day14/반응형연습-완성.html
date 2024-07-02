@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형연습2</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        #section {
+            padding: 32px;
+           
+
+        }
+
+        .section-container {
+
+            max-width: 1280px;
+
+            margin: 0 auto;
+            
+        }
+
+        .contents-box {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .my-img {
+            width: 100%;
+            aspect-ratio: 1;
+            background-image: url(../루피.jpg);
+            background-size: cover;
+        }
+
+        .contents-text-box {
+            width: 100%;
+          
+        }
+
+        .contents-text-box > h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+
+        }
+
+        .contents-text-box > .sub-title {
+            font-size: 20px;
+            font-weight:bold;
+            margin-bottom: 20px;
+            color:#222;
+        }
+
+        .contents-text-box > .contents {
+            color:#444;
+        }
+
+        @media screen and (max-width:767px) {
+            #my-section {
+                padding : 0 20px;
+            }
+            .contents-box {
+                flex-direction: column;
+                
+            }
+            
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="section">
+        <div class="section-container">
+            <div class="contents-box">
+                <figure class="my-img"></figure>
+                <div class="contents-text-box">
+                    <h2>I'm loopy</h2>
+                    <p class="sub-title">나는 루피야!</p>
+                    <p class="contents">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui doloremque quisquam rem esse perferendis autem voluptas at est aperiam, nemo fuga cum modi sed harum. Neque id illo deserunt mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dolore autem. Sint eos adipisci aspernatur saepe. Obcaecati iste animi minus molestiae, harum fugiat atque, rem quod sed, voluptas quas id?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
