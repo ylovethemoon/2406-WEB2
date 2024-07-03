@@ -5,15 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>band-home</title>
     <link rel="stylesheet" href="../reset.css">
-    
+    <style>
+
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: #f6f8fa;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-spr  {
+            display: block;
+            background: url('../day15/band-image/spr_intro.png') no-repeat 0 -98px;
+            width: 78px;
+            height: 29px;
+        }
+
+        .hide-text {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(0 0 99.9% 99.9%);
+            overflow: hidden;
+            height: 1px;
+            width: 1px;
+            padding: 0;
+            border: 0;
+        }
+        
+    </style>
 </head>
 <body>
     <header>
-        <a href="#" class="logo-spr"></a>
+        <a href="#" class="logo-spr">
+            <span class="hide-text">
+                BAND
+            </span>
+        </a>
         <div class="header-menu">
             한국어
             <a href="#">회원가입</a>
-            <a href="#" class="login"></a>
+            <a href="#" class="login">로그인</a>
         </div>
     </header>
     
