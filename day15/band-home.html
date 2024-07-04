@@ -19,7 +19,7 @@
 
         .logo-spr  {
             display: block;
-            background: url('../day15/band-image/spr_intro.png') no-repeat 0 -98px;
+            background: url('band-image/spr_intro.png') no-repeat 0 -98px;
             width: 78px;
             height: 29px;
         }
@@ -52,7 +52,7 @@
     </header>
     
     <section id="main">
-        <div class="main-container">
+        <div class="section-container">
             <figure>
                 <img src="" alt="phone">
             </figure>
@@ -75,13 +75,56 @@
         </div>
     </section>
 
+
+    <style>
+        body > section {
+            padding: 0 32px;
+
+        }
+
+        .section-container {
+            width: 1000px;
+            margin: 0 auto;
+            
+        }
+
+        #meeting-ex > .section-container {
+            display: flex;
+            gap:24px
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #meeting-ex > .ex-contents {
+            
+        }
+        
+    </style>
     <section id="meeting-ex">
-        <div class="meeting-ex-container">
-            <figure>
-                <img src="" alt="">
-            </figure>
-            <h3></h3>
-            <p></p>
+        <div class="section-container">
+            <div class="ex-contents">
+                <figure>
+                    <img src="band-image/img_seo01.jpg" alt="">
+                </figure>
+                <h3></h3>
+                <p></p>
+            </div>
+            <div class="ex-contents">
+                <figure>
+                    <img src="band-image/img_seo02.jpg" alt="">
+                </figure>
+                <h3></h3>
+                <p></p>
+            </div>
+            <div class="ex-contents">
+                <figure>
+                    <img src="band-image/img_seo03.jpg" alt="">
+                </figure>
+                <h3></h3>
+                <p></p>
+            </div>
         </div>
     </section>
 
@@ -108,7 +151,7 @@
     </section>
 
     <section id="download">
-        <div class="downloda-container">
+        <div class="section-container">
             <div class="you-band-down">
                 <figure>
                     <img src="" alt="">
